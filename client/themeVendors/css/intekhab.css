@@ -1,0 +1,15 @@
+#myImage {
+    background: url('../img/logoBanner.JPG') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1000;
+    width: 200vh;
+    height: 100vh;
+}
+
+.errorStyles {
+    font-size: 10px;
+    color: red;
+}
