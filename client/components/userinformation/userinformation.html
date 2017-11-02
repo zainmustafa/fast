@@ -1,3 +1,8 @@
 <div ng-controller="UserInfoController as userinfo">
-    <p>EDIT CONTROLLER</p>
+        <h1>Orders</h1>
+        <ul  ng-repeat="food in userinfo.orders">
+            <li>{{food.name}}</li>
+            <li>{{food.price}}RS</li>
+            <li>{{food.item}}</li>
+        </ul>
 </div>

@@ -7,16 +7,16 @@
 (function () {
 
     angular.module("myApp")
-        .controller("SignupController", ['UserService',SignupController]);
+        .controller("SignupController", ['UserService', '$state',SignupController]);
 
-    function SignupController(UserService) {
+    function SignupController(UserService,$state) {
         var vm = this;
 
-        var check = UserService.checkUser();
-        if(check) {
-            console.log("session");
-            $state.go('dashboard');
-        }
+        // var check = UserService.checkUser();
+        // if(check) {
+        //     console.log("session");
+        //     $state.go('dashboard');
+        // }
 
 
         this.email =  "";
@@ -42,6 +42,7 @@
                             username: vm.name,
                             email: vm.email
                         });
+                        $state.go('dashboard');
 
                         // User is signed in.
                     } else {

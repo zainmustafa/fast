@@ -9,20 +9,20 @@ angular.module('myApp')
         var user = false;
 
         this.checkUser = function () {
-            user = user !=  false;
-            return user;
-            // firebase.auth().onAuthStateChanged(function(user) {
-            //     if (user) {
-            //         console.log("TRUE");
-            //         $state.go('dashboard');
-            //         return true;
-            //
-            //     } else {
-            //         console.log("FALSE");
-            //         $state.go('login');
-            //         return false;
-            //     }
-            // });
+
+            firebase.auth().onAuthStateChanged(function(user) {
+
+                if (user) {
+                    console.log("TRUE");
+                    // $state.go('dashboard');
+                    return true;
+
+                } else {
+                    console.log("FALSE");
+                    $state.go('login');
+                    return false;
+                }
+            });
         }
 
     });

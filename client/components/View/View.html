@@ -1,6 +1,74 @@
-<div ng-controller="ViewController">
+<div ng-controller="ViewController" layout="column" style="margin: 20px;display: -webkit-inline-box;" ng-cloak>
 
-    <p>VIEW CONTROLLER</p>
+
+
+    <div ng-controller="ViewController as view" layout="column" style="margin: 20px;display: -webkit-inline-box;" ng-cloak>
+        <section style="display: -webkit-inline-box;">
+            <div>
+                <div style="width: 40vh; text-align: center">
+                    <md-card>
+                        <h1 >
+                            Burgers
+                        </h1>
+                    </md-card>
+                </div>
+                <md-card ng-repeat="food in view.burgers" style="list-style: none;text-align: center">
+                    <li>{{food.name}}</li>
+                    <li>{{food.price}}RS</li>
+                    <li>{{food.item}}</li>
+                    <button ng-click="view.addToCart(food)">AddToCart</button>
+                </md-card>
+            </div>
+
+            <div>
+                <div style="width: 40vh; text-align: center">
+                    <md-card>
+                        <h1 >
+                            Rolls
+                        </h1>
+                    </md-card>
+                </div>
+                <md-card ng-repeat="food in view.rolls" style="list-style: none;text-align: center">
+                    <li>{{food.name}}</li>
+                    <li>{{food.price}}RS</li>
+                    <li>{{food.item}}</li>
+                    <button ng-click="view.addToCart(food)">AddToCart</button>
+                </md-card>
+            </div>
+
+            <div>
+                <div style="width: 40vh; text-align: center">
+                    <md-card>
+                        <h1 >
+                            Bar BQ
+                        </h1>
+                    </md-card>
+                </div>
+                <md-card ng-repeat="food in view.bbq" style="list-style: none;text-align: center">
+                    <li>{{food.name}}</li>
+                    <li>{{food.price}}RS</li>
+                    <li>{{food.item}}</li>
+                    <button ng-click="view.addToCart(food)">AddToCart</button>
+                </md-card>
+            </div>
+            <div>
+                <div style="width: 40vh; text-align: center">
+                    <md-card>
+                        <h1 >
+                            Sandwich
+                        </h1>
+                    </md-card>
+                </div>
+                <md-card ng-repeat="food in view.sandwiches" style="list-style: none;text-align: center">
+                    <li>{{food.name}}</li>
+                    <li>{{food.price}}RS</li>
+                    <li>{{food.item}}</li>
+                    <button ng-click="view.addToCart(food)">AddToCart</button>
+                </md-card>
+            </div>
+        </section>
+
+    </div>
 
 
 

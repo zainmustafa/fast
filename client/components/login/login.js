@@ -34,6 +34,7 @@
                 var errorMessage = error.message;
                 // ...
             }).then(function (data,error) {
+                $state.go('dashboard');
                 console.log("asdasdasdasdasd");
             });
 

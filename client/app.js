@@ -9,19 +9,19 @@
 
     function AppController($state, UserService) {
 
-        // var check = UserService.checkUser();
-        // if(check) {
-        //     $state.go('dashboard');
-        // }
-        //
-        // this.goToView = function () {
-        //     $state.go('view')
-        // };
-        //
-        //
-        // this.goToAdd = function () {
-        //     $state.go('add')
-        // };
+        var check = UserService.checkUser();
+        if(check) {
+            $state.go('dashboard');
+        }
+
+        this.goToView = function () {
+            $state.go('view')
+        };
+
+
+        this.goToAdd = function () {
+            $state.go('add')
+        };
 
     }
 

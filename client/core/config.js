@@ -36,6 +36,11 @@
                             templateUrl: 'components/header/header.html',
                             controller: 'HeaderController'
                         },
+                        'sidebar@': {
+                            templateUrl: "components/sidebar/sidebar.html",
+                            controller: "SidebarController",
+                            controllerAs: "sidebar"
+                        },
                         'content@': {
                             templateUrl: "components/dashboard/dashboard.html",
                             controller: "DashboardController",
@@ -50,13 +55,37 @@
                             templateUrl: 'components/header/header.html',
                             controller: 'HeaderController'
                         },
+                        'sidebar@': {
+                            templateUrl: "components/sidebar/sidebar.html",
+                            controller: "SidebarController",
+                            controllerAs: "sidebar"
+                        },
                         'content@': {
                             templateUrl: 'components/userinformation/userinformation.html',
                             controller: 'UserInfoController',
                             controllerAs: 'userinfo'
                         }
                     }
-                });
+                })
+                .state('view', {
+                url: '/view',
+                views: {
+                    'header@': {
+                        templateUrl: 'components/header/header.html',
+                        controller: 'HeaderController'
+                    },
+                    'sidebar@': {
+                        templateUrl: "components/sidebar/sidebar.html",
+                        controller: "SidebarController",
+                        controllerAs: "sidebar"
+                    },
+                    'content@': {
+                        templateUrl: "components/View/View.html",
+                        controller: "ViewController",
+                        controllerAs: "view"
+                    }
+                }
+            });
             $urlRouterProvider.otherwise('/login')
 
         })

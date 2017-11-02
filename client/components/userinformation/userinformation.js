@@ -13,7 +13,9 @@
     angular.module("myApp")
         .controller("UserInfoController", [UserInfoController]);
     function UserInfoController() {
-
+            this.orders = [];
+        this.orders = JSON.parse(localStorage.getItem('cart'));
+            debugger;
     }
 
 })();
